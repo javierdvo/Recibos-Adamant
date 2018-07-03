@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reciboAdamant" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b3b5ea9f-7b6b-4d49-9fd3-ea0c96505639">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="Departamento" class="java.lang.String"/>
+	<parameter name="Gas" class="java.lang.String"/>
+	<parameter name="Agua" class="java.lang.String"/>
+	<parameter name="Date" class="java.lang.String"/>
+	<parameter name="Month" class="java.lang.String"/>
+	<parameter name="Year" class="java.lang.String"/>
+	<parameter name="LectAntGas" class="java.lang.String"/>
+	<parameter name="LectActGas" class="java.lang.String"/>
+	<parameter name="photo1" class="java.lang.String"/>
+	<parameter name="photo2" class="java.lang.String"/>
+	<parameter name="ConsGas" class="java.lang.String"/>
+	<parameter name="Total" class="java.lang.String"/>
+	<parameter name="MonthReal" class="java.lang.String"/>
+	<parameter name="YearReal" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="689" splitType="Stretch">
+			<image>
+				<reportElement x="40" y="20" width="140" height="69" uuid="72a65230-1026-4771-8b21-0ddbf35c6814"/>
+				<imageExpression><![CDATA[$P{photo1}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="380" y="20" width="139" height="70" uuid="6e910980-0e5c-414d-a44b-2e69d4bf2c95"/>
+				<imageExpression><![CDATA[$P{photo2}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="40" y="156" width="307" height="30" uuid="634f7d51-a10e-4f44-841e-562c548f62f9"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Santiago de Querétaro, a "+$P{Date}+" de "+$P{Month}+" de "+$P{Year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="120" width="480" height="29" uuid="3b85ea07-ef59-435a-b6ed-8dff173bbca1"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Nota de Pago Insoluto Adamant"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="271" width="307" height="19" uuid="32a7ebff-dd74-425c-912b-a31a4f450949"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Gas"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="390" width="307" height="30" uuid="569d6966-3f25-41e5-be49-0fbfe316828c"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Agua"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement key="" x="39" y="260" width="480" height="4" backcolor="#FF9933" uuid="36af83e9-5d41-40ef-95a3-a166eda07a27"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement key="" x="40" y="380" width="480" height="4" backcolor="#3366CC" uuid="51774271-7c46-4f02-be6a-ac587f78ac79"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="40" y="200" width="479" height="52" uuid="187821d5-e27b-4dcd-bd8c-632a2940fa41"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Estimado condómino del departamento "+$P{Departamento}+", por medio de la presente la administración del Condominio Adamant le informa que tiene un saldo pendiente por servicios al día de hoy:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="591" width="478" height="92" uuid="9319172a-5691-4e36-a60c-56edc8fe503a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Le pedimos sea tan amable de realizar su pago próntamente, el cuál puede realizar por medio de un depósito o una transferencia bancaria a nuestra cuenta XXXXXXX.
+
+Le recordamos poner su número de departamento como el monto de centavos para facilitar la detección de su pago, e igualmente le pedimos que una vez realizado el pago nos envíe el comprobante por medio de un email a la cuenta pagos.adamant@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="310" width="100" height="20" uuid="2554d5bf-f7e2-48eb-945c-71dfd5c5361e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Por Pagar]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="340" width="100" height="20" uuid="dd8dbd40-e1b5-4906-8211-86751c765f11"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Gas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="449" width="100" height="20" uuid="a11c58ad-af82-42d8-951f-882ef788fed2"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Agua}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="39" y="501" width="307" height="30" uuid="01ff8960-2b69-486e-8254-be6928e3fbd0"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="560" width="98" height="20" uuid="e6d95b38-1c17-468a-8c38-1df49b0678e5"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Total}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement key="" x="39" y="491" width="480" height="4" backcolor="#000000" uuid="5e397f9b-14a9-4af2-bb16-77a7b0e3e1ea"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="420" y="420" width="100" height="20" uuid="bd9ff549-30ec-4c2f-8977-05126d024e4a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Por Pagar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="530" width="100" height="20" uuid="7256b2ee-c5fe-4445-a82c-ac9a60ea8860"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Por Pagar]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
